@@ -4,8 +4,8 @@ basic flask app with single route to hello world page
 """
 from flask import Flask, render_template
 
-
 app = Flask(__name__)
+
 
 @app.route('/')
 def index():
