@@ -28,3 +28,12 @@ class FIFOCache(BaseCaching):
                 first_key = next(iterator)
                 self.cache_data.pop(first_key)
                 print(f'DISCARD: {first_key}')
+
+    def get(self, key):
+        """
+        get a cache item from cache dictionary
+        """
+        if not key or key not in self.cache_data:
+            return None
+        else:
+            return self.cache_data[key]
