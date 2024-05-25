@@ -16,6 +16,9 @@ class FIFOCache(BaseCaching):
         super().__init__()
 
     def put(self, key, item):
+        """
+        FIFO caching mechanism
+        """
         if not key or not item:
             pass
         else:
