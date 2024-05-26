@@ -21,8 +21,7 @@ class LIFOCache(BaseCaching):
         """
         if not key or not item:
             pass
-
-        if key in self.cache_data:
+        elif key in self.cache_data:
             self.cache_data.pop(key)
             self.cache_data[key] = item
         else:
